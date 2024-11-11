@@ -76,3 +76,4 @@ D:\sort\repozitor\dddd\Demasic\Demasic\obj\Debug\net8.0-windows\SalesHistoryWind
 D:\sort\repozitor\dddd\Demasic\Demasic\obj\Debug\net8.0-windows\App.baml
 D:\sort\repozitor\dddd\Demasic\Demasic\obj\Debug\net8.0-windows\EditWindow.baml
 D:\sort\repozitor\dddd\Demasic\Demasic\obj\Debug\net8.0-windows\SalesHistoryWindow.baml
+D:\sort\repozitor\dddd\Demasic\Demasic\obj\Debug\net8.0-windows\Demasic.sourcelink.json

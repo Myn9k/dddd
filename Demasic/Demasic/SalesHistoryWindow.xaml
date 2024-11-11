@@ -6,16 +6,16 @@
         xmlns:local="clr-namespace:Demasic"
         mc:Ignorable="d"
                 Title="История продаж" Height="450" Width="800" Icon="/Resource/icon.ico">
-    <Grid Background="{StaticResource PrimaryBackgroundBrush}">
-        <ListBox ItemsSource="{Binding SalesHistory}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+    <Grid>
+        <ListBox ItemsSource="{Binding Sales}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Padding="10" Background="{StaticResource PrimaryBackgroundBrush}">
+                    <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Padding="10">
                         <StackPanel>
-                            <TextBlock Text="{Binding product.name}" FontSize="20" FontWeight="Bold" Foreground="Black" Margin="0,0,0,5"/>
+                            <TextBlock Text="{Binding ProductName}" FontSize="20" FontWeight="Bold" Margin="0,0,0,5"/>
                             <DockPanel LastChildFill="True">
-                                <TextBlock Text="{Binding sale_date, StringFormat='Дата продажи: {0:d}'}" FontSize="16" Foreground="Gray" DockPanel.Dock="Left"/>
-                                <TextBlock Text="{Binding amount, StringFormat='Сумма: {0:C}'}" FontSize="16" Foreground="Black" HorizontalAlignment="Right"/>
+                                <TextBlock Text="{Binding SaleDate, StringFormat='Дата продажи: {0:d}'}" FontSize="16" Foreground="Gray" DockPanel.Dock="Left"/>
+                                <TextBlock Text="{Binding Amount, StringFormat='Сумма: {0:C}'}" FontSize="16" HorizontalAlignment="Right"/>
                             </DockPanel>
                         </StackPanel>
                     </Border>

@@ -9,7 +9,7 @@ namespace Demasic
     public class Partner
     {
         public int id { get; set; }
-        public int inn, rate;
+        public int? inn, rate;
         public string name, history, sell_place, email, fio, adress, type;
 
         public string Type
@@ -17,12 +17,12 @@ namespace Demasic
             get { return type; }
             set { type = value; }
         }
-        public int Inn
+        public int? Inn
         {
             get { return inn; }
             set { inn = value; }
         }
-        public int Rate
+        public int? Rate
         {
             get { return rate; }
             set { rate = value; }
@@ -61,7 +61,7 @@ namespace Demasic
 
         public Partner() { }
 
-        public Partner(string type, string name, string adress, int inn, string fio, string email, int rate, string sell_place, string history)
+        public Partner(string type, string name, string adress, int? inn, string fio, string email, int? rate, string sell_place, string history)
         {
             this.type = type;
             this.name = name;

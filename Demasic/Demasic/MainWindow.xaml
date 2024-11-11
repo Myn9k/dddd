@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Demasic"
         mc:Ignorable="d"
-               Title="ОКНО" Height="450" Width="800" Icon="Resource/icon.ico">
+        Title="ОКНО" Height="450" Width="800" Icon="Resource/icon.ico">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -15,7 +15,7 @@
 
         <Image Source="Resource/icon.png" HorizontalAlignment="Left"/>
 
-        <ListBox Grid.Row="1" x:Name="ListBoxPartners" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <ListBox Grid.Row="1" x:Name="ListBoxPartners" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ItemsSource="{Binding Partners}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Padding="10">
@@ -28,7 +28,7 @@
                             <TextBlock Text="{Binding Fio}" FontSize="16"/>
                             <TextBlock Text="{Binding Email}" FontSize="16"/>
                             <TextBlock Text="Рейтинг: " FontSize="16">
-                                <Run Text="{Binding Rating}"/>
+                                <Run Text="{Binding Rate}"/>
                             </TextBlock>
                         </StackPanel>
                     </Border>

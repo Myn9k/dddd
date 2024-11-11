@@ -22,7 +22,6 @@ namespace Demasic
         public MainWindow()
         {
             InitializeComponent();
-
             LoadPartners();
             DataContext = this;
         }

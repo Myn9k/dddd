@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Demasic.models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -21,22 +22,26 @@ namespace Demasic
     /// </summary>
     public partial class SalesHistoryWindow : Window
     {
-        public ObservableCollection<Partner> SalesHistory { get; set; }
+        public ObservableCollection<Sale> Sales { get; set; }
 
         public SalesHistoryWindow(Partner partner)
         {
             InitializeComponent();
+            LoadSales(partner.id);
             DataContext = this;
+        }
 
+        private void LoadSales(int partnerId)
+        {
             var options = new DbContextOptionsBuilder<ApplicationDbContext>()
                 .UseSqlite("Data Source=demo.db")
                 .Options;
 
-
             using (var context = new ApplicationDbContext(options))
             {
-                SalesHistory = new ObservableCollection<Partner>(
-                    context.Partners.Where(history => history == partner).ToList()
+                
+                Sales = new ObservableCollection<Sale>(
+                    context.Sales.Where(s => s.PartnerId == partnerId).ToList()
                 );
             }
         }
